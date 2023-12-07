@@ -13,9 +13,18 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Configuration
+/**
+ * Kafka producer configuration class.
+ *
+ * @author Nikita Korolev
+ * @version 1.0
+ */
 public class KafkaProducerConfig {
 
     @Bean
+    /**
+     * Bean that generates a producer factory.
+     */
     public ProducerFactory<String, String> producerFactory() {
         Map<String, Object> configProps = new HashMap<>();
         configProps.put(

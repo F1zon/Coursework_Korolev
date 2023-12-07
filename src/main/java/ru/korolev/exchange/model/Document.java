@@ -9,6 +9,11 @@ import java.sql.Date;
 @AllArgsConstructor
 @Getter
 @Setter
+/**
+ * A class for storing values from a database.
+ * @version 1.0
+ * @author Nikita Korolev
+ */
 public class Document {
     private int id;
     private String view;

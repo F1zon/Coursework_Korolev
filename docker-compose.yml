@@ -1,5 +1,10 @@
 version: '2'
 services:
+  api:
+    image: docker-java-jar
+    ports:
+      - '8080:8080'
+
   zookeeper:
     image: confluentinc/cp-zookeeper:latest
     environment:

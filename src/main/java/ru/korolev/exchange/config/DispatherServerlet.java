@@ -2,6 +2,12 @@ package ru.korolev.exchange.config;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
+/**
+ * Create an application context hierarchy.
+ *
+ * @author Nikita Korolev
+ * @version 1.0
+ */
 public class DispatherServerlet extends AbstractAnnotationConfigDispatcherServletInitializer {
     @Override
     protected Class<?>[] getRootConfigClasses() {

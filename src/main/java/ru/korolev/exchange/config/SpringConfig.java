@@ -16,6 +16,11 @@ import javax.sql.DataSource;
 @Configuration
 @ComponentScan("ru.korolev.exchange")
 @EnableWebMvc
+/**
+ * Configuration settings class for spring.
+ * @author Nikita Korolev
+ * @version 1.0
+ */
 public class SpringConfig implements WebMvcConfigurer {
     private final ApplicationContext applicationContext;
 
@@ -25,6 +30,9 @@ public class SpringConfig implements WebMvcConfigurer {
     }
 
     @Bean
+    /**
+     * adding all Views in the webapp directory.
+     */
     public InternalResourceViewResolver viewResolver() {
         InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
         viewResolver.setApplicationContext(applicationContext);
@@ -34,6 +42,9 @@ public class SpringConfig implements WebMvcConfigurer {
     }
 
     @Bean
+    /**
+     *  Bean that adds a connection to the postgresql/library database.
+     */
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
 
@@ -46,6 +57,12 @@ public class SpringConfig implements WebMvcConfigurer {
     }
 
     @Bean
+    /**
+     * This is the central class in the JDBC core package.
+     * It simplifies the use of JDBC and helps to avoid common errors.
+     * It executes core JDBC workflow,
+     * leaving application code to provide SQL and extract results.
+     */
     public JdbcTemplate jdbcTemplate() {
         return new JdbcTemplate(dataSource());
     }
