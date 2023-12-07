@@ -16,20 +16,18 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter")
     compileOnly("javax.servlet:javax.servlet-api:4.0.1")
     implementation("org.springframework:spring-beans:5.3.20")
-    implementation("org.springframework:spring-context:5.3.20")
-    implementation("org.springframework:spring-core:5.3.20")
+    implementation("org.springframework:spring-context:5.3.19")
+    implementation("org.springframework:spring-core:5.3.19")
     implementation("org.springframework:spring-web:5.3.19")
-    liquibaseRuntime("org.postgresql:postgresql:42.2.20")
-    liquibaseRuntime("org.liquibase:liquibase-core:3.7.0")
-    liquibaseRuntime("jakarta.xml.bind:jakarta.xml.bind-api:4.0.1")
-    liquibaseRuntime("ch.qos.logback:logback-classic:1.2.6")
-    liquibaseRuntime("org.liquibase:liquibase-groovy-dsl:2.1.1")
     compileOnly("org.projectlombok:lombok:1.18.30")
     annotationProcessor("org.projectlombok:lombok:1.18.30")
     implementation("org.springframework:spring-jdbc:5.1.10.RELEASE")
     implementation("org.springframework:spring-webmvc:5.3.20")
     implementation("javax.servlet:jstl:1.2")
-
+    implementation("org.hibernate.validator:hibernate-validator:7.0.0.Final")
+    implementation("org.postgresql:postgresql:42.5.0")
+    implementation("org.springframework.kafka:spring-kafka:2.9.12")
+    implementation("org.springframework.boot:spring-boot-starter-web:2.7.16")
 }
 
 tasks.test {
